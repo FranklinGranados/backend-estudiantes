@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
- 
+
 const estudianteSchema = new mongoose.Schema({
-  nombre: String,
-  carrera: String,
-  edad: Number
+  nombre: { type: String, required: true },
+  carrera: { type: String, required: true },
+  edad: { type: Number, required: true }
 });
- 
+
 module.exports = mongoose.model('Estudiante', estudianteSchema);
